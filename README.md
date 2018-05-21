@@ -17,19 +17,22 @@ Let’s build a simple server. The server will show a bunch of programming langu
 ## Installation:
 
 Install vue and vue cli
-> npm install -g @vue/cli
+        
+      npm install -g @vue/cli
 
 Next, we need to setup the server to run our GraphQL, we will need a express server running at a specific port to communicate with the GraphQL 
-> npm install cors express express-graphql graphql --save
+      
+      npm install cors express express-graphql graphql --save
 
 Let's quickly go over each package:
-cors: will let our Vue app query the backend from a different port
-graphql: dependency of apollo-server-express
-express: node js server
-express-graphql: middleware for express for understanding graphql
+  - cors: will let our Vue app query the backend from a different port
+  - graphql: dependency of apollo-server-express
+  - express: node js server
+  - express-graphql: middleware for express for understanding graphql
 
 We will be mLab.com as user interface and cloud server for our MongoDB database. Inorder to communicate with MongoDB, mongoose is used to create the connection from the express server  
->   npm install mongoose --save
+    
+      npm install mongoose --save
 
 Great. Time to get started on the server. Create a directory server and create a app.js file under it. Visit app.js[link] for the contents. (comments provided for each statement)
 
@@ -78,7 +81,8 @@ Reference:
 ### Building the Client (Vue)
 
 Similar to how axios or JQuery is used for accessing RestFul services we need a client which can understand and communicate with GraphQL. There are multiple clients for GraphQL but we will be using Apollo Client
->   npm install vue-apollo@next graphql apollo-client apollo-link apollo-link-context apollo-link-http apollo-cache-inmemory graphql-tag --save
+    
+      npm install vue-apollo@next graphql apollo-client apollo-link apollo-link-context apollo-link-http apollo-cache-inmemory graphql-tag --save
 
 Let's quickly go over each package:
 -  vue-apollo: An Apollo/GraphQL integration for VueJS. We install the latest version of the plugin which allows us to use all the great features that comes with Apollo client 2.0.
